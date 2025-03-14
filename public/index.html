@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEEZ Car Washing - Próximamente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #0a192f, #162447);
+            position: relative;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="fade-in">
+    <canvas id="starCanvas"></canvas>
+    <div class="text-center text-white">
+        <img src="logo.png" alt="Sispondin Logo" class="mx-auto w-64 mb-6">
+        <!-- <h1 class="text-3xl md:text-5xl font-bold">¡Próximamente!</h1> -->
+
+        <p class="mt-2 text-lg md:text-xl">No te pierdas el lanzamiento! 😎</p>
+        <div class="mt-8 flex justify-center">
+            <input type="email" id="emailInput" placeholder="Escribe tu e-mail" class="p-2 rounded-l-md text-gray-900 outline-none">
+            <button onclick="subscribe()" class="bg-blue-600 text-white py-2 px-3 rounded-r-md hover:bg-blue-500 transition">Avísenme</button>
+        </div>
+        <p id="message" class="mt-4 text-green-400"></p>
+    </div>
+
+    <script>
+        function subscribe() {
+            const email = document.getElementById('emailInput').value;
+            if (!email.includes('@')) {
+                document.getElementById('message').innerText = 'Por favor, introduce un correo válido';
+                return;
+            }
+            
+            fetch('/subscribe', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('message').innerText = data.message;
+                document.getElementById('emailInput').value = '';
+            })
+            .catch(error => {
+                document.getElementById('message').innerText = 'Error al enviar el correo';
+            });
+        }
+
+        // Generar estrellas en el fondo
+        function drawStars() {
+            const canvas = document.getElementById('starCanvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            function random(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            function drawStar(x, y, size) {
+                ctx.beginPath();
+                ctx.arc(x, y, size, 0, Math.PI * 2);
+                ctx.fillStyle = "white";
+                ctx.fill();
+            }
+
+            function generateStars(count) {
+                for (let i = 0; i < count; i++) {
+                    drawStar(random(0, canvas.width), random(0, canvas.height), random(0.5, 2));
+                }
+            }
+
+            generateStars(150);
+        }
+
+        window.onload = drawStars;
+        window.onresize = drawStars;
+    </script>
+</body>
+</html>

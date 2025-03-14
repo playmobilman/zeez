@@ -1,0 +1,222 @@
+[debug] [2025-03-14T01:43:15.767Z] ----------------------------------------------------------------------
+[debug] [2025-03-14T01:43:15.769Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2025-03-14T01:43:15.770Z] CLI Version:   13.34.0
+[debug] [2025-03-14T01:43:15.770Z] Platform:      win32
+[debug] [2025-03-14T01:43:15.770Z] Node Version:  v20.11.1
+[debug] [2025-03-14T01:43:15.770Z] Time:          Thu Mar 13 2025 22:43:15 GMT-0300 (Uruguay Standard Time)
+[debug] [2025-03-14T01:43:15.770Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-14T01:43:15.775Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-14T01:43:15.775Z] > authorizing via signed-in user (playmobilman@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\DOCS\Projects\SIDE\Landings\zeez-landing
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-03-14T01:43:44.977Z] Checked if tokens are valid: true, expires at: 1741919772144
+[debug] [2025-03-14T01:43:44.978Z] Checked if tokens are valid: true, expires at: 1741919772144
+[debug] [2025-03-14T01:43:44.979Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-03-14T01:43:44.980Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"zeezcarwash","name":"Zeez CarWash"}
+[debug] [2025-03-14T01:43:46.018Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2025-03-14T01:43:46.018Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/create_project.global.6457030323497533312"}
+[debug] [2025-03-14T01:43:46.019Z] Checked if tokens are valid: true, expires at: 1741919772144
+[debug] [2025-03-14T01:43:46.019Z] Checked if tokens are valid: true, expires at: 1741919772144
+[debug] [2025-03-14T01:43:46.019Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.6457030323497533312 [none]
+[debug] [2025-03-14T01:43:46.828Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.6457030323497533312 200
+[debug] [2025-03-14T01:43:46.828Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.6457030323497533312 {"name":"operations/create_project.global.6457030323497533312"}
+[debug] [2025-03-14T01:43:47.338Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-03-14T01:43:47.339Z] Checked if tokens are valid: true, expires at: 1741919772144
+[debug] [2025-03-14T01:43:47.339Z] Checked if tokens are valid: true, expires at: 1741919772144
+[debug] [2025-03-14T01:43:47.339Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.6457030323497533312 [none]
+[debug] [2025-03-14T01:43:47.544Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.6457030323497533312 200
+[debug] [2025-03-14T01:43:47.544Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.6457030323497533312 {"name":"operations/create_project.global.6457030323497533312","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"15560725384","projectId":"zeezcarwash","lifecycleState":"ACTIVE","name":"Zeez CarWash","createTime":"2025-03-14T01:43:46.089494Z"}}
+[debug] [2025-03-14T01:43:47.545Z] Checked if tokens are valid: true, expires at: 1741919772144
+[debug] [2025-03-14T01:43:47.545Z] Checked if tokens are valid: true, expires at: 1741919772144
+[debug] [2025-03-14T01:43:47.546Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/zeezcarwash:addFirebase [none]
+[debug] [2025-03-14T01:43:51.087Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/zeezcarwash:addFirebase 200
+[debug] [2025-03-14T01:43:51.087Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/zeezcarwash:addFirebase {"name":"operations/workflows/OWFhNTczYTAtNmM1Zi00YzkxLTljNWItYzJlMzE0NTk2NDEy"}
+[debug] [2025-03-14T01:43:51.087Z] Checked if tokens are valid: true, expires at: 1741919772144
+[debug] [2025-03-14T01:43:51.087Z] Checked if tokens are valid: true, expires at: 1741919772144
+[debug] [2025-03-14T01:43:51.087Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OWFhNTczYTAtNmM1Zi00YzkxLTljNWItYzJlMzE0NTk2NDEy [none]
+[debug] [2025-03-14T01:43:55.337Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OWFhNTczYTAtNmM1Zi00YzkxLTljNWItYzJlMzE0NTk2NDEy 200
+[debug] [2025-03-14T01:43:55.337Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OWFhNTczYTAtNmM1Zi00YzkxLTljNWItYzJlMzE0NTk2NDEy {"name":"operations/workflows/OWFhNTczYTAtNmM1Zi00YzkxLTljNWItYzJlMzE0NTk2NDEy"}
+[debug] [2025-03-14T01:43:55.849Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-03-14T01:43:55.849Z] Checked if tokens are valid: true, expires at: 1741919772144
+[debug] [2025-03-14T01:43:55.850Z] Checked if tokens are valid: true, expires at: 1741919772144
+[debug] [2025-03-14T01:43:55.850Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OWFhNTczYTAtNmM1Zi00YzkxLTljNWItYzJlMzE0NTk2NDEy [none]
+[debug] [2025-03-14T01:43:56.793Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OWFhNTczYTAtNmM1Zi00YzkxLTljNWItYzJlMzE0NTk2NDEy 200
+[debug] [2025-03-14T01:43:56.793Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OWFhNTczYTAtNmM1Zi00YzkxLTljNWItYzJlMzE0NTk2NDEy {"name":"operations/workflows/OWFhNTczYTAtNmM1Zi00YzkxLTljNWItYzJlMzE0NTk2NDEy"}
+[debug] [2025-03-14T01:43:57.798Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-03-14T01:43:57.798Z] Checked if tokens are valid: true, expires at: 1741919772144
+[debug] [2025-03-14T01:43:57.798Z] Checked if tokens are valid: true, expires at: 1741919772144
+[debug] [2025-03-14T01:43:57.799Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OWFhNTczYTAtNmM1Zi00YzkxLTljNWItYzJlMzE0NTk2NDEy [none]
+[debug] [2025-03-14T01:43:58.540Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OWFhNTczYTAtNmM1Zi00YzkxLTljNWItYzJlMzE0NTk2NDEy 200
+[debug] [2025-03-14T01:43:58.541Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OWFhNTczYTAtNmM1Zi00YzkxLTljNWItYzJlMzE0NTk2NDEy {"name":"operations/workflows/OWFhNTczYTAtNmM1Zi00YzkxLTljNWItYzJlMzE0NTk2NDEy"}
+[debug] [2025-03-14T01:44:00.545Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-03-14T01:44:00.546Z] Checked if tokens are valid: true, expires at: 1741919772144
+[debug] [2025-03-14T01:44:00.546Z] Checked if tokens are valid: true, expires at: 1741919772144
+[debug] [2025-03-14T01:44:00.546Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OWFhNTczYTAtNmM1Zi00YzkxLTljNWItYzJlMzE0NTk2NDEy [none]
+[debug] [2025-03-14T01:44:01.314Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OWFhNTczYTAtNmM1Zi00YzkxLTljNWItYzJlMzE0NTk2NDEy 200
+[debug] [2025-03-14T01:44:01.314Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/OWFhNTczYTAtNmM1Zi00YzkxLTljNWItYzJlMzE0NTk2NDEy {"name":"operations/workflows/OWFhNTczYTAtNmM1Zi00YzkxLTljNWItYzJlMzE0NTk2NDEy","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"zeezcarwash","projectNumber":"15560725384","displayName":"Zeez CarWash","name":"projects/zeezcarwash","resources":{"hostingSite":"zeezcarwash"}}}
+[info] 
+[info] === Your Firebase project is ready! ===
+[info] 
+[info] Project information:
+[info]    - Project ID: zeezcarwash
+[info]    - Project Name: Zeez CarWash
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/zeezcarwash/overview
+[info] i  Using project zeezcarwash (Zeez CarWash) 
+[info] 
+=== Hosting Setup
+[debug] [2025-03-14T01:44:01.324Z] Checked if tokens are valid: true, expires at: 1741919772144
+[debug] [2025-03-14T01:44:01.324Z] Checked if tokens are valid: true, expires at: 1741919772144
+[debug] [2025-03-14T01:44:01.324Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/zeezcarwash [none]
+[debug] [2025-03-14T01:44:02.181Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/zeezcarwash 200
+[debug] [2025-03-14T01:44:02.181Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/zeezcarwash {"projectId":"zeezcarwash","projectNumber":"15560725384","displayName":"Zeez CarWash","name":"projects/zeezcarwash","resources":{"hostingSite":"zeezcarwash"},"state":"ACTIVE","etag":"1_68076381-6cea-4be3-928d-33cdc538558e"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2025-03-14T01:47:44.075Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2025-03-14T01:47:44.966Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2025-03-14T01:47:44.966Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"11.4.0","browserURL":"https://www.gstatic.com/firebasejs/11.4.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/11.4.0/firebase.tgz"},"live":{"version":"11.4","browserURL":"https://www.gstatic.com/firebasejs/live/11.4/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/11.4/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/11.4.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/11.4.0/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/11.4.0/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/11.4.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/11.4.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/11.4.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/11.4.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/11.4.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/11.4.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/11.4.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js","vertexai":"https://www.gstatic.com/firebasejs/11.4.0/firebase-vertexai.js","data-connect":"https://www.gstatic.com/firebasejs/11.4.0/firebase-data-connect.js","firestore.memory":"https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.memory.js"}}
+[info] i  Skipping write of public/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\DOCS\Projects\SIDE\Landings\zeez-landing 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=565634408&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2025-03-14T01:49:13.463Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2025-03-14T01:49:13.463Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2025-03-14T01:49:13.839Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2025-03-14T01:49:13.839Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2025-03-14T01:49:13.844Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2025-03-14T01:49:14.224Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2025-03-14T01:49:14.225Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"playmobilman","id":2245533,"node_id":"MDQ6VXNlcjIyNDU1MzM=","avatar_url":"https://avatars.githubusercontent.com/u/2245533?v=4","gravatar_id":"","url":"https://api.github.com/users/playmobilman","html_url":"https://github.com/playmobilman","followers_url":"https://api.github.com/users/playmobilman/followers","following_url":"https://api.github.com/users/playmobilman/following{/other_user}","gists_url":"https://api.github.com/users/playmobilman/gists{/gist_id}","starred_url":"https://api.github.com/users/playmobilman/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/playmobilman/subscriptions","organizations_url":"https://api.github.com/users/playmobilman/orgs","repos_url":"https://api.github.com/users/playmobilman/repos","events_url":"https://api.github.com/users/playmobilman/events{/privacy}","received_events_url":"https://api.github.com/users/playmobilman/received_events","type":"User","user_view_type":"private","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"notification_email":null,"public_repos":12,"public_gists":0,"followers":0,"following":5,"created_at":"2012-08-30T02:27:01Z","updated_at":"2025-03-12T01:22:39Z","private_gists":0,"total_private_repos":29,"owned_private_repos":29,"disk_usage":250667,"collaborators":3,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as playmobilman 
+[info] 
+[debug] [2025-03-14T01:54:19.357Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2025-03-14T01:54:19.670Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2025-03-14T01:54:19.670Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2025-03-14T01:54:28.859Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2025-03-14T01:54:29.158Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2025-03-14T01:54:29.158Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2025-03-14T01:54:30.528Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2025-03-14T01:54:30.727Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2025-03-14T01:54:30.727Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2025-03-14T01:54:34.886Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2025-03-14T01:54:35.099Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2025-03-14T01:54:35.100Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2025-03-14T01:54:35.494Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2025-03-14T01:54:35.681Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2025-03-14T01:54:35.681Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2025-03-14T01:54:36.090Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2025-03-14T01:54:36.281Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2025-03-14T01:54:36.281Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2025-03-14T01:54:36.660Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2025-03-14T01:54:36.919Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2025-03-14T01:54:36.919Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2025-03-14T01:54:37.296Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2025-03-14T01:54:37.482Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2025-03-14T01:54:37.483Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2025-03-14T01:54:38.204Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2025-03-14T01:54:38.404Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2025-03-14T01:54:38.404Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2025-03-14T01:54:39.531Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2025-03-14T01:54:39.722Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2025-03-14T01:54:39.722Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
