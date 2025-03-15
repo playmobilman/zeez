@@ -84,14 +84,14 @@
 
         document.getElementById("emailForm").addEventListener("submit", async (event) => {
             event.preventDefault();
-            const email = document.getElementById("email").value;
+            const email = document.getElementById("emailInput").value;
             await fetch("https://zeez-one.vercel.app/subscribe", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email }),
             });
             alert("Correo guardado");
-            
+
         });
 
         // Generar estrellas en el fondo
