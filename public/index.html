@@ -89,9 +89,15 @@
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('message').innerText = data.message;
+                document.getElementById('emailInput').value = '';
+            })
+            .catch(error => {
+                document.getElementById('message').innerText = 'Error al registrar el correo';
             });
-            alert("Correo guardado");
-
         });
 
         // Generar estrellas en el fondo
